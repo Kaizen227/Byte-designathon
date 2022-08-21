@@ -1,0 +1,237 @@
+.nav {
+height: 50px;
+width: 100%;
+background-color: #5276b9;
+position: relative;
+z-index: 11;
+}
+
+.nav > .nav-header {
+display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+display: inline-block;
+font-size: 22px;
+color: #fff;
+padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+display: none;
+}
+
+.nav > .nav-links {
+display: inline;
+float: right;
+font-size: 18px;
+}
+
+.nav > .nav-links > a {
+display: inline-block;
+padding: 13px 10px 13px 10px;
+text-decoration: none;
+color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+display: none;
+}
+
+@media (max-width:600px) {
+.nav > .nav-btn {
+display: inline-block;
+position: absolute;
+right: 0px;
+top: 0px;
+}
+.nav > .nav-btn > label {
+display: inline-block;
+width: 50px;
+height: 50px;
+padding: 13px;
+}
+.nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+background-color: rgba(0, 0, 0, 0.3);
+}
+.nav > .nav-btn > label > span {
+display: block;
+width: 25px;
+height: 10px;
+border-top: 2px solid #eee;
+}
+.nav > .nav-links {
+position: absolute;
+display: block;
+width: 100%;
+background-color: #333;
+height: 0px;
+transition: all 0.3s ease-in;
+overflow-y: hidden;
+top: 50px;
+left: 0px;
+}
+.nav > .nav-links > a {
+display: block;
+width: 100%;
+}
+.nav > #nav-check:not(:checked) ~ .nav-links {
+height: 0px;
+}
+.nav > #nav-check:checked ~ .nav-links {
+height: calc(200px - 50px);
+overflow-y: auto;
+z-index: 11;
+}
+}
+#diagonals{
+    overflow-x: hidden;
+  }
+  
+  h2  {
+      font-size: 1.4em;
+      font-weight: 700;
+      text-transform: uppercase;
+  }
+  
+  p {
+      font-weight: 200;
+      font-size: 0.9em;
+      line-height: normal;
+      margin: 10px 0;
+  }
+  .split-section {
+    clear: both;
+    position: relative;
+    height: 450px;
+    margin: 90px 0;
+    background: #333;
+  }
+  
+  .infos {
+      color: #fff;
+    padding: 60px;
+  }
+  
+  /* build the rectangles */
+  .rr-left,
+  .rr-right {
+    overflow:hidden;
+    height: 430px;
+    margin: 0;
+    padding: 30px;
+    float:left;
+      color: #fff;
+    height: 500px;
+       -webkit-transform: skew(-10deg, 0deg);
+    -moz-transform: skew(-10deg, 0deg);
+    -o-transform: skew(-10deg, 0deg);
+  }
+  
+  .rr-left img, .rr-right img{
+  position:absolute;
+  top: -9999px;
+  left: -9999px;
+  right: -9999px;
+  bottom: -9999px;
+  margin: auto;
+  height: 100% ;
+  width: auto;
+       -webkit-transform: skew(10deg, 0deg);
+    -moz-transform: skew(10deg, 0deg);
+    -o-transform: skew(10deg, 0deg);
+  }
+  
+  .rr-left {
+     margin: -30px 0 0 -20px;
+   left: -30px;
+  }
+  
+  .rr-right {
+     margin: -30px -20px 0 0;
+   right: -45px;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  h1, p {
+    margin-bottom: 0.8125rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  a {
+    color: #00aeef;
+  }
+  a:hover {
+    color: #23c3ff;
+  }
+  
+  .split-section {
+    display: flex;
+    height: 100vh;
+    background: #000;
+    width: auto;
+    overflow: hidden;
+  }
+  
+  .split-section__column {
+    position: relative;
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .split-section__text {
+    padding: 40px;
+    max-width: 480px;
+    z-index: 1;
+    color: rgba(255, 255, 255, 0.9);
+  font-size: 100%;
+  line-height: 1.625em;
+  }
+  
+  .split-section__image {
+    position: absolute;
+    top: 50%;
+    z-index: 0;
+  }
+  .split-section__column--left .split-section__image {
+    right: 0;
+    transform: translate(5%, -50%);
+    clip-path: polygon(0 0, 100% 0%, 90% 100%, 0% 100%);
+  }
+  .split-section__column--right .split-section__image {
+    left: 0;
+    transform: translate(-5%, -50%);
+    clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .split-section__image img {
+    opacity: 0.5;
+  }
+  
+  .split-section__image img {
+    transition: transform 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transform: scale(1.1);
+    will-change: transform;
+  }
+  .split-section__column:hover .split-section__image img {
+    transform: scale(1);
+  }
+  
+  
